@@ -21,8 +21,8 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![distorrted image][writeup1.png]
-![undistorrted image][writeup2.png]
+![distorrted image](writeup1.png)
+![undistorrted image](writeup2.png)
 
 
 
@@ -30,13 +30,13 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 **Example of a distortion-corrected image.**
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 
-![distorrted test image][writeup3.png]
-![undistorrted test image][writeup4.png]
+![distorrted test image](writeup3.png)
+![undistorrted test image](writeup4.png)
 
 **Color and gradient Transforms**
 The code for this is in the 2nd cell pipeline function. I used a combination of color and gradient thresholds to generate a binary image .  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
-![color and gradient transform][writeup5.png]
+![color and gradient transform](writeup5.png)
 
 **Perspective Transform**
 
@@ -50,15 +50,15 @@ dst=np.array([[220, 700], [220,20],[1110 ,20], [1110,700] ],np.float32)
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![original image][writeup6.png]
-![warped image][writeup7.png]
+![original image](writeup6.png)
+![warped image](writeup7.png)
 
 **I identify lane line pixles in 10th cell **
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
-![original image][writeup6.png]
-![warped image][writeup7.png]
+![original image](writeup6.png)
+![warped image](writeup7.png)
 
 **I calculated the radius of curvature of the lane and the position of the vehicle with respect to center**
 
@@ -68,7 +68,7 @@ I did this in 2nd cell process_image function
 
 I implemented this step in lines # through # in my code in cell 12 and below is the resuly
 
-![lane lines plotted][writeup10.png]
+![lane lines plotted](writeup10.png)
 
 ---
 
@@ -76,7 +76,7 @@ I implemented this step in lines # through # in my code in cell 12 and below is 
 
 **Video link**.
 
-Here's a [link to my video result](final.mp4)
+Here's a [link to my video result](outputNew.mp4)
 
 ---
 
